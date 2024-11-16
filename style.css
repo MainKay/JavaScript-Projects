@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#game {
+	width: 500px;
+	height: 200px;
+	border: 1px solid black;
+	position: relative;
+	margin: 50px auto;
+	overflow: hidden;
+	background-image: url('background.jpg');
+	background-size: cover; /* Dopasowanie obrazu do rozmiaru kontenera */
+	background-position: center; /* Wyśrodkowanie tła */
+	background-color: #f0f0f0; /* Kolor tła zapasowego */
+}
+
+#character {
+	width: 50px;
+	height: 80px;
+	background-color: blue;
+	background-image: url('potatoe.png');
+	background-size: cover;
+	position: relative;
+	top: 120px;
+	left: 50px;
+}
+
+.animate{
+	animation: jump 500ms;
+}
+
+
+
+@keyframes jump {
+	0% { top: 150px; }
+	30% { top: 100px; }
+	70% { top: 100px; }
+	100% { top: 150px; }
+}
+
+#block {
+	width: 40px;
+	height: 20px;
+	background-color: black;
+	background-image: url('knife.png');
+	background-size: cover;
+	position: absolute;
+	top: 180px;
+	left: 480px;
+	animation: block 1s infinite linear;
+}
+
+@keyframes block {
+	0% { left: 480px; }
+	100% { left: -40px; }
+}
